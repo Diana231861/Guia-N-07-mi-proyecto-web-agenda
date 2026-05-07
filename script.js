@@ -52,6 +52,32 @@ function agregarContacto() {
     // Actualizar lista
     mostrarContactos();
 }
+function mostrarContactos() {
+
+    let contenedor = document.getElementById("contactos");
+
+    contenedor.innerHTML = "";
+
+    contactos.forEach((contacto, index) => {
+
+        contenedor.innerHTML += `
+        
+        <div class="contacto">
+
+            <p><strong> Nombre:</strong> ${contacto.nombre}</p>
+
+            <p><strong> Teléfono:</strong> ${contacto.telefono}</p>
+
+            <p><strong> Correo:</strong> ${contacto.correo}</p>
+
+            <button class="btnEliminar" onclick="eliminarContacto(${index})">
+                Eliminar
+            </button>
+
+        </div>
+        `;
+    });
+}
 function eliminarContacto(index) {
 
     contactos.splice(index, 1);
