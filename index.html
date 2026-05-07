@@ -11,15 +11,27 @@
 </head>
 
 <body>
-    <h1>Bienvenido a mi pagina web</h1>
-    <p>Ingrese su nombre:</p>
-    <input type="text" id="nombre" placeholder="Escribe tu nombre" />
-    <button onclick="saludar()">Saludar</button>
-    <p id="resultado"></p>
-    <h2>Formulario de contacto</h2>
-    <input type="email" id="correo" placeholder="Ingrese su correo">
-    <button onclick="validarCorreo()">Validar correo</button>
-    <p id="mensajeCorreo"></p>
+    <div class="contenedor">
+
+        <h1>Agenda de Contactos</h1>
+
+        <!-- Formulario -->
+        <div class="formulario">
+
+            <h2>Registrar Contacto</h2>
+
+            <input type="text" id="nombre" placeholder="Ingrese su nombre completo">
+
+            <input type="text" id="telefono" placeholder="Ingrese su teléfono">
+
+            <input type="email" id="correo" placeholder="Ingrese su correo">
+
+            <button id="btnAgregar">Agregar Contacto</button>
+
+            <p id="mensaje"></p>
+
+        </div>
+    </div>
     <!-- Enlace al archivo JavaScript -->
     <script src="script.js"></script>
 </body>
