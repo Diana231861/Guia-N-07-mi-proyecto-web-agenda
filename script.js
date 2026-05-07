@@ -52,3 +52,14 @@ function agregarContacto() {
     // Actualizar lista
     mostrarContactos();
 }
+function eliminarContacto(index) {
+
+    contactos.splice(index, 1);
+
+    mostrarContactos();
+
+    let mensaje = document.getElementById("mensaje");
+
+    mensaje.innerText = "🗑️ Contacto eliminado correctamente.";
+    mensaje.style.color = "blue";
+}
